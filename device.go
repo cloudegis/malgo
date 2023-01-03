@@ -186,3 +186,10 @@ func goStopCallback(pDevice *C.ma_device) {
 		callback()
 	}
 }
+
+func (dev *Device) ChangeVolume(v float32) int {
+       value := C.float(v)
+       r := C.setDeviceMasterVolume(dev.cptr(), value)
+       return int(r)
+}
+

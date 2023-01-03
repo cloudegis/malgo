@@ -9,7 +9,7 @@ extern "C" {
 
 extern void goLogCallback(ma_context* pContext, char* message);
 void goSetContextConfigCallbacks(ma_context_config* pConfig, ma_context* pContext);
-
+extern int setDeviceMasterVolume(ma_device *pDevice, float volume);
 extern void goDataCallback(ma_device *pDevice, void *pOutput, void *pInput, ma_uint32 frameCount);
 extern void goStopCallback(ma_device* pDevice);
 void goSetDeviceConfigCallbacks(ma_device_config* pConfig);

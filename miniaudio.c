@@ -27,3 +27,8 @@ void goSetDeviceConfigCallbacks(ma_device_config* pConfig) {
     pConfig->dataCallback = goDataCallbackWrapper;
     pConfig->stopCallback = goStopCallback;
 }
+
+int setDeviceMasterVolume(ma_device *pDevice, float volume)
+{
+    return ma_device_set_master_volume(pDevice, volume);
+}
